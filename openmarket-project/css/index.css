@@ -1,0 +1,104 @@
+/* 로그인 css */
+.login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hodu-logo img {
+    width: 238px;
+    height: 74px;
+    margin-bottom: 70px;
+}
+
+/* 구매회원 + 판매회원 로그인 버튼 */
+.login-box {
+    position: relative;
+    height: 352px;
+}
+
+.login-box .login-btn{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.login-btn li {
+    padding-top: 20px;
+    height: 88px;
+    font-weight: 500;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #c4c4c4;
+    border-bottom: none;
+    font-size: 1.125rem;
+}
+.login-btn li a {
+    padding: 20px 78px 38px 77px;
+}
+.login-btn .purchasing-member {
+    border-right: none;
+    z-index: 10;
+    background-color: #fff;
+}
+.sales-member {
+    background-color: #F2F2F2;
+    z-index: 1;
+}
+
+
+/* 로그인 + 비밀번호 작성 from */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 35px 36px 35px;
+    border: 1px solid #c4c4c4;
+    background-color: #fff;
+    border-radius: 0 10px 10px 10px;
+    z-index: 9;
+    position: absolute;
+    bottom: 0;
+}
+
+
+input {
+    padding: 20px 0 20px 0;
+    border: none;
+    border-bottom: 1px solid #C4C4C4;
+}
+input::placeholder {
+    color: #767676;
+}
+.input-id {
+    margin-bottom: 6px;
+}
+.input-pw {
+    margin-bottom: 36px;
+}
+.input-submit {
+    padding: 19px 215.6px;
+    border: none;
+    background-color: #21BF48;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* 회원가입 및 비밀번호 찾기 */
+.login-join {
+    margin-top: 30px;
+}
+.login-join a {
+    color: #333;
+    position: relative;
+}
+
+.login-join span {
+    margin: 0 14px;
+    color: #333;
+}
