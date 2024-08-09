@@ -1,4 +1,17 @@
-/* 로그인 css */
+body {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+}
+
+/* ---------- 로그인 CSS ---------- */
+Main {
+    width: 100%;
+}
+
+
+
+/* ---------- 로그인 CSS ---------- */
 .login {
     width: 100%;
     min-height: 100vh;
@@ -19,6 +32,7 @@
 .login-box {
     position: relative;
     height: 352px;
+    /* background-color: #c4c4c4; */
 }
 
 .login-box .login-btn{
@@ -40,15 +54,32 @@
     padding: 20px 78px 38px 77px;
 }
 .login-btn .purchasing-member {
+    /* border-bottom: 1px solid; */
     border-right: none;
     z-index: 10;
     background-color: #fff;
+
 }
 .sales-member {
     background-color: #F2F2F2;
     z-index: 1;
 }
 
+.login-box.sales-active .purchasing-member {
+    background-color: #F2F2F2;
+    z-index: 1;
+    border-right: 1px solid #c4c4c4;;
+}
+
+.login-box.sales-active .sales-member {
+    background-color: #fff;
+    z-index: 10;
+    border-left: none;
+}
+
+.login-box.sales-active .login-form {
+    border-radius: 10px 0 10px 10px;
+}
 
 /* 로그인 + 비밀번호 작성 from */
 .login-form {
@@ -63,22 +94,24 @@
     bottom: 0;
 }
 
-
-input {
+[class|="login-input"] {
     padding: 20px 0 20px 0;
     border: none;
     border-bottom: 1px solid #C4C4C4;
 }
-input::placeholder {
+[class|="login-input"]:focus {
+    outline: none;
+}
+[class|="login-input"]::placeholder {
     color: #767676;
 }
-.input-id {
+.login-input-id {
     margin-bottom: 6px;
 }
-.input-pw {
-    margin-bottom: 36px;
+.login-input-pw {
+    margin-bottom: 10px; /* 36px에서 10px로 줄임 */
 }
-.input-submit {
+.login-input-submit {
     padding: 19px 215.6px;
     border: none;
     background-color: #21BF48;
@@ -89,7 +122,14 @@ input::placeholder {
     color: #fff;
 }
 
-/* 회원가입 및 비밀번호 찾기 */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    height: 20px; /* 고정 높이를 주어 메시지가 없을 때도 공간 유지 */
+}
+
+/* 회원가입 및 비밀번호 찾기*/
 .login-join {
     margin-top: 30px;
 }
