@@ -4,6 +4,135 @@ body {
     /* min-height: 100vh; */
 }
 
+/* ---------- Header CSS ---------- */
+#hodoHeader {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.10);
+}
+.top-nav-bar {
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 22px 0;
+}
+.left-section {
+    display: flex;
+    align-items: center;
+}
+.navbar-hodu-logo img {
+    width: 124px;
+    height: 38px;
+}
+
+/* 검색창 */
+.navbar-search {
+    margin-left: 30px;
+    position: relative;
+}
+.navbar-search fieldset {
+    width: 400px;
+    padding: 13px 22px;
+    border: 2px solid #21BF48;
+    border-radius: 50px;
+    background-color: #fff;
+}
+.navbar-search input {
+    border: none;
+    width: 100%;
+    padding-right: 40px;
+}
+.navbar-search input:focus {
+    outline: none;
+}
+.navbar-search button {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    transform: translateY(-50%);
+}
+
+/* 장바구니 및 로그인 */
+.navbar-sub-menu {
+    display: flex;
+    gap: 26px;
+}
+.navbar-sub-menu li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar-sub-menu li a img {
+    width: 32px;
+    margin-bottom: 4px;
+}
+.navbar-sub-menu li a span {
+    color: #767676;
+    font-size: 0.75rem;
+}
+
+.navbar-sub-menu li a#cart-link:hover img,
+.navbar-sub-menu li a#cart-link:hover img {
+    content: url('../assets/icon-shopping-cart-2.svg');
+}
+.navbar-sub-menu li a#login-link:hover img {
+    content: url('../assets/icon-user-2.svg');
+}
+.navbar-sub-menu li a:hover span,
+.navbar-sub-menu li a#cart-link:hover span {
+    color: #21BF48;
+}
+
+/* 마이페이지 css */
+.mypage-menu {
+    position: relative;
+}
+.mypage-popup {
+    /* display: none; */
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 0;
+    width: 130px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+.mypage-popup::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    transform: translateX(-50%) rotate(45deg);
+    border-radius: 4px;
+    top: -6.5px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: -3px -3px 5px rgba(0,0,0,0.07);
+}
+.mypage-popup a {
+    padding: 10px 17px;
+    color: #767676;
+    font-weight: 500;
+}
+.mypage-popup a:first-child {
+    margin-bottom: 8px;
+}
+.mypage-popup a:hover {
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #767676;
+    border-radius: 5px;
+    width: 110px;
+    color: #000;
+}
+
+
 /* ---------- 로그인 CSS ---------- */
 Main {
     width: 100%;
@@ -141,4 +270,158 @@ Main {
 .login-join span {
     margin: 0 14px;
     color: #333;
+}
+
+
+
+/* ---------- Main - List Css ---------- */
+.swiper {
+    width:100%;
+    height: 500px;
+}
+.swiper-slide {
+    width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #000;
+    padding: 54px 26px;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: white;
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: black;
+  }
+
+/* 상품 List */
+#product-list-container {
+    width: 100%;
+    margin: 80px 0 180px 0;
+}
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    max-width: 1280px;
+    margin: 0 auto;
+    gap: 78px 70px;
+}
+
+.product-content img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #C4C4C4;
+}
+.store-name {
+    color: #767676;
+    margin-bottom: 10px;
+}
+.product-name {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+}
+.product-price strong{
+    font-size: 1.5rem;
+    margin-right: 2px;
+}
+
+
+
+/* ---------- 장바구니 CSS ---------- */
+.cart-container {
+    max-width: 1280px;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+    padding: 54px 0 52px 0;
+    background-color: antiquewhite;
+}
+.cart-container .cart-tit {
+    font-size: 2.25rem;
+}
+
+
+
+/* ---------- Footer CSS ---------- */
+#hoduFooter {
+    width: 100%;
+    background-color: #F2F2F2;
+    font-size: 0.875rem;
+    /* margin-top: auto; */
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 0 63px 0;
+
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 22px;
+}
+
+/* 이용약관 CSS */
+.footer-nav-item {
+    display: flex;
+    gap: 32px;
+}
+.footer-nav-item li {
+    position: relative;
+}
+.footer-nav-item li:not(:last-child):before {
+    content: '|';
+    position: absolute;
+    right: -18px;
+}
+
+/* SNS CSS */
+.footer-hodu-sns {
+    display: flex;
+    gap: 14px;
+}
+.footer-hodu-sns li {
+    width: 32px;
+    height: 32px;
+}
+.footer-hodu-sns a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.hodu-insta {
+    background: url(../assets/icon-insta.svg) no-repeat;
+}
+.hodu-facebook {
+    background: url(../assets/icon-fb.svg) no-repeat;
+}
+.hodu-youtube {
+    background: url(../assets/icon-yt.svg) no-repeat;
+}
+
+/* info CSS */
+.hodu-info {
+    padding-top: 30px;
+    border-top: 1px solid #C4C4C4;
+}
+
+.hodu-info p {
+    color: #767676;
+    line-height: 1.7;
 }

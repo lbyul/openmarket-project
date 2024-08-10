@@ -1,0 +1,6 @@
+#cart-icon {
+    content: url('../assets/icon-shopping-cart-2.svg') !important;
+}
+#cart-text {
+    color: #21BF48 !important;
+}
