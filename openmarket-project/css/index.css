@@ -85,12 +85,12 @@ body {
     color: #21BF48;
 }
 
-/* 마이페이지 css */
+/* header nav - 마이페이지 css */
 .mypage-menu {
     position: relative;
 }
 .mypage-popup {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: calc(100% + 15px);
     left: 50%;
@@ -112,24 +112,38 @@ body {
     border-radius: 4px;
     top: -6.5px;
     background: #fff;
-    z-index: 2;
+    z-index: -1;
     box-shadow: -3px -3px 5px rgba(0,0,0,0.07);
 }
+.mypage-popup::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: transparent;
+}
+
 .mypage-popup a {
     padding: 10px 17px;
     color: #767676;
     font-weight: 500;
+    
 }
 .mypage-popup a:first-child {
     margin-bottom: 8px;
 }
 .mypage-popup a:hover {
-    margin: 0 auto;
+    margin: 0 auto 8px;
     background-color: #fff;
-    border: 1px solid #767676;
+    outline: 1px solid #767676;
     border-radius: 5px;
     width: 110px;
     color: #000;
+}
+.mypage-popup a:last-child:hover{
+    margin-bottom: 0;
 }
 
 
@@ -299,11 +313,11 @@ Main {
     height: 10px;
     background: white;
     opacity: 1;
-  }
+}
   
-  .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
     background: black;
-  }
+}
 
 /* 상품 List */
 #product-list-container {

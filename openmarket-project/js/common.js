@@ -13,11 +13,11 @@ function updateCartStyle() {
     const isCartPage = currentPage === 'cart.html';
 
     if (isCartPage) {
-        cartIcon.src = './assets/icon-shopping-cart-2.svg';
+        cartIcon.src = '../assets/icon-shopping-cart-2.svg';
         cartText.style.color = '#21BF48';
         cartLink.classList.add('active');
     } else {
-        cartIcon.src = './assets/icon-shopping-cart.svg';
+        cartIcon.src = '../assets/icon-shopping-cart.svg';
         cartText.style.color = '';
         cartLink.classList.remove('active');
     }

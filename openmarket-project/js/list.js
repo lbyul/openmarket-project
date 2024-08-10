@@ -23,7 +23,6 @@ const swiper = new Swiper('.swiper', {
 });
 
 
-
 async function mallReqList() {
    try{ const response = await fetch("https://openmarket.weniv.co.kr/products/", {
         method: "GET",
